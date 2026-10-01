@@ -25,3 +25,7 @@ Review whether another person can resume without asking for facts already availa
 ## Limits
 
 This is a maintainer-run example within the same conversation, not an independent subagent or fresh-session evaluation. No unskilled control run, timing test, token-count measurement, cross-host trial, or external community adoption has been established. It demonstrates one concrete use and does not prove the other six modules work in every scenario.
+
+## Subsequent independent-context evaluation
+
+The paragraph above describes the original example only. A later [seven-skill matched-control evaluation](../../evaluations/2026-10-01/RESULTS.md) now adds independent subagent contexts, a no-target-body control, blinded review, wall-time recording, and output-token counts. Cross-host testing and outside adoption remain unestablished.

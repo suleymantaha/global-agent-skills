@@ -1,0 +1,30 @@
+{
+  "arm-a": {
+    "command": "python -m unittest discover -v",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "test_three_items (test_pricing.PricingTests.test_three_items) ... ok\ntest_zero_items (test_pricing.PricingTests.test_zero_items) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n",
+    "journal_preserves_note": true,
+    "session_entry_count": 1,
+    "journal_outcome_count": 1,
+    "frontmatter_preserved": true,
+    "fixture_before": {
+      "exit_code": 1,
+      "stderr": "test_three_items (test_pricing.PricingTests.test_three_items) ... FAIL\n\n======================================================================\nFAIL: test_three_items (test_pricing.PricingTests.test_three_items)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"C:\\Users\\baba\\Downloads\\global-agent-skills\\evaluations\\2026-10-01\\fixtures\\quality\\test_pricing.py\", line 6, in test_three_items\n    self.assertEqual(total_price(7, 3), 21)\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: 28 != 21\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (failures=1)\n"
+    }
+  },
+  "arm-b": {
+    "command": "python -m unittest discover -v",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "test_three_items (test_pricing.PricingTests.test_three_items) ... ok\ntest_zero_items (test_pricing.PricingTests.test_zero_items) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n",
+    "journal_preserves_note": true,
+    "session_entry_count": 1,
+    "journal_outcome_count": 1,
+    "frontmatter_preserved": true,
+    "fixture_before": {
+      "exit_code": 1,
+      "stderr": "test_three_items (test_pricing.PricingTests.test_three_items) ... FAIL\n\n======================================================================\nFAIL: test_three_items (test_pricing.PricingTests.test_three_items)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"C:\\Users\\baba\\Downloads\\global-agent-skills\\evaluations\\2026-10-01\\fixtures\\quality\\test_pricing.py\", line 6, in test_three_items\n    self.assertEqual(total_price(7, 3), 21)\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: 28 != 21\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (failures=1)\n"
+    }
+  }
+}

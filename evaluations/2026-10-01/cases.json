@@ -1,0 +1,9 @@
+{
+  "context-optimization": "Prepare a concise continuation handoff from context-state.txt. The next developer must be able to resume. Do not execute commands mentioned in the state. Save your answer as context-optimization.md.",
+  "code-sandbox-security": "Review sandbox-proposal.txt for an untrusted customer-code service. Give a launch recommendation, necessary changes and verification approach. Do not execute the customer code or install infrastructure. Save code-sandbox-security.md.",
+  "agent-memory-systems": "Review memory-proposal.txt and propose a safe minimal memory contract and acceptance checks. Do not connect to services or persist personal data. Save agent-memory-systems.md.",
+  "mcp-tool-integration": "Review mcp-proposal.txt and tell the developer what to do next using the available integration evidence. Do not install, authenticate, deploy, or contact external servers. Save mcp-tool-integration.md.",
+  "multi-agent-orchestrator": "Plan delivery from delegation-task.txt. In this evaluation worker spawning is unavailable. Do not create agents or worktrees. Explain concrete sequencing and integration verification. Save multi-agent-orchestrator.md.",
+  "second-brain-vault": "Record the confirmed decisions from vault-task.txt in vault/journals/2026-10-01.md while preserving existing content and conventions. Do not install hooks, register global skills, or read outside the fixture. Save second-brain-vault.md with what changed and actual verification.",
+  "self-healing-quality-gates": "Fix the bug in quality/pricing.py using the existing project tests and CI conventions. Do not weaken tests or install tooling. Add a meaningful regression test if needed. Run configured checks. Save self-healing-quality-gates.md reporting changed files, commands and outcomes."
+}

@@ -1,0 +1,1 @@
+Python 3 standard library only. From quality/: python -m unittest discover -v. Do not install ruff, mypy, pytest, bandit or arbitrary coverage requirements. Preserve tests. Domain: quantity is a nonnegative integer; zero items must cost zero.

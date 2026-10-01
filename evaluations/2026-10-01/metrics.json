@@ -1,0 +1,54 @@
+{
+  "tokenizer": "cl100k_base",
+  "tiktoken_version": "0.14.0",
+  "scope": "Saved report text only; not model billing, hidden reasoning, input or tool totals",
+  "arms": {
+    "arm-a": {
+      "report_tokens": {
+        "context-optimization": 297,
+        "code-sandbox-security": 508,
+        "agent-memory-systems": 531,
+        "mcp-tool-integration": 346,
+        "multi-agent-orchestrator": 429,
+        "second-brain-vault": 202,
+        "self-healing-quality-gates": 270
+      },
+      "total_report_tokens": 2583,
+      "suite_elapsed_wall_seconds": 77,
+      "timing": {
+        "start_utc": "2026-10-01 19:15:02 UTC",
+        "end_utc": "2026-10-01 19:16:19 UTC",
+        "measurement": "whole-suite elapsed wall time, not model latency",
+        "elapsed_wall_seconds": 77
+      }
+    },
+    "arm-b": {
+      "report_tokens": {
+        "context-optimization": 330,
+        "code-sandbox-security": 464,
+        "agent-memory-systems": 529,
+        "mcp-tool-integration": 381,
+        "multi-agent-orchestrator": 459,
+        "second-brain-vault": 218,
+        "self-healing-quality-gates": 368
+      },
+      "total_report_tokens": 2749,
+      "suite_elapsed_wall_seconds": 85,
+      "timing": {
+        "start_utc": "2026-10-01T19:15:09Z",
+        "end_utc": "2026-10-01T19:16:34Z",
+        "whole_suite_elapsed_wall_time_seconds": 85,
+        "measurement": "Actual tool UTC timestamps for whole-suite elapsed wall time; not model latency."
+      }
+    }
+  },
+  "target_skill_text_tokens": {
+    "context-optimization": 271,
+    "code-sandbox-security": 327,
+    "agent-memory-systems": 286,
+    "mcp-tool-integration": 277,
+    "multi-agent-orchestrator": 257,
+    "second-brain-vault": 279,
+    "self-healing-quality-gates": 302
+  }
+}

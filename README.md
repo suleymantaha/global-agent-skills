@@ -21,7 +21,7 @@ Preserve the objective, permissions, changed files, actual checks, unresolved
 issues, evidence pointers, and the next action. Verify the repository state.
 ```
 
-**See a real result:** [the launch-preparation handoff](examples/context-handoff/README.md) includes the actual request, captured command output, and agent-produced handoff. It is one maintainer-run example; broader behavioral evaluation is still pending.
+**See a real result:** [the launch-preparation handoff](examples/context-handoff/README.md) includes the actual request, captured command output, and agent-produced handoff. It is one maintainer-run example. A later [independent-context evaluation of all seven modules](evaluations/2026-10-01/RESULTS.md) includes matched control outputs, blinded review, timing, and output-token counts; it did not establish speed or token savings.
 
 [Browse all seven skills](#skill-guide) · [Installation](#installation) · [Releases](https://github.com/suleymantaha/global-agent-skills/releases)
 
@@ -73,6 +73,8 @@ global-agent-skills/
 ├── requirements-dev.txt              # Validator dependency; not a runtime requirement
 ├── assets/
 │   └── cover.png                      # Generated project cover
+├── evaluations/
+│   └── 2026-10-01/                    # Protocol, fixtures, outputs, review and measured results
 ├── examples/
 │   └── context-handoff/               # Actual request, evidence, output and limits
 ├── docs/
@@ -303,7 +305,7 @@ python scripts/validate_skills.py
 
 The validator checks that skills exist, frontmatter is parseable, names match folders, descriptions have valid lengths, metadata maps strings to strings, instructions are nonempty, and repository-local Markdown file links resolve. It does not validate anchor existence, external URLs, or every optional Agent Skills field constraint. GitHub Actions runs this same validator on pushes and pull requests.
 
-Format and local-link checks have passed. Initial validator checks also exercised rejection of invalid names, non-string metadata, and missing local files. These are structural checks. A [maintainer-run context handoff](examples/context-handoff/README.md) demonstrates one real use; independent and broader behavioral evaluation of the collection is still pending. No security, cost-saving, or isolation guarantee follows from a green CI run.
+Format and local-link checks have passed. Initial validator checks also exercised rejection of invalid names, non-string metadata, and missing local files. These are structural checks. A [maintainer-run context handoff](examples/context-handoff/README.md) demonstrates one real use; an [independent-context matched-control evaluation](evaluations/2026-10-01/RESULTS.md) now covers all seven modules with one case each. Repeated-run, cross-host, and production behavioral evaluation remains open. No security, cost-saving, or isolation guarantee follows from a green CI run.
 
 ## Troubleshooting
 

@@ -1,0 +1,22 @@
+{
+  "source_commit": "dd8f3934024d0c120efd20bbc37935d5172c3edd",
+  "date_timezone": "2026-10-01 Europe/Istanbul",
+  "arms": {
+    "arm-a": "No target skill body supplied/read",
+    "arm-b": "Matching target skill body read"
+  },
+  "replicates_per_arm_per_case": 1,
+  "host": "Same local Windows host and agent runtime",
+  "context_isolation": "Independent subagents spawned with fork_turns=none; no parent conversation supplied",
+  "model_settings": "Inherited host configuration; no model or reasoning override",
+  "billing_tokens": "Unavailable; output-only tokenizer counts are not total billed tokens",
+  "skills": {
+    "context-optimization": "3d5650c54d82b944134c34dbd7f70fc7048407265af3271d17a84c082993333c",
+    "code-sandbox-security": "384c65a9fda62e0be110ce69e9fa046ffd404bbe74eb779ea079404e0475fcd7",
+    "agent-memory-systems": "d868aece49f87eea1ab7c05f7ba09b433dc62830e196714dfd5620b20840e21f",
+    "mcp-tool-integration": "1638f62a2f73682f0e69d5645aa7b71ff8644b512e3e6654dead151c849d9cde",
+    "multi-agent-orchestrator": "c8719adf5003f235447edb88d7d998c17e7283c78c73b3a77e7669e15adffd7c",
+    "second-brain-vault": "5515387c57621c10f494064706957eee01337ce4af131e7680f11b7b364be3bb",
+    "self-healing-quality-gates": "af17756d29bb4064a0cb4e8a4fdb3570cc305f250dff9ae2a637c9334cab7a03"
+  }
+}

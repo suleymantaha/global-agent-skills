@@ -1,0 +1,6 @@
+{
+  "start_utc": "2026-10-01T19:15:09Z",
+  "end_utc": "2026-10-01T19:16:34Z",
+  "whole_suite_elapsed_wall_time_seconds": 85,
+  "measurement": "Actual tool UTC timestamps for whole-suite elapsed wall time; not model latency."
+}

@@ -1,0 +1,8 @@
+# Launch kararı
+Launch ertelenmeli. subprocess host üzerinde müşteri koduna güvenlik sınırı sağlamaz; host environment, home erişimi, sınırsız network ve timeout eksikliği doğrudan credential/data erişimi ve kaynak tüketimi riski yaratır. Docker Desktop kurulumu MicroVM kanıtı değildir; fixture içinde provision edilmiş sandbox yok.
+
+Gerekli değişiklikler: doğrulanmış VM veya eşdeğer güçlü izolasyon backend/runtime profile seç; her iş için ayrı geçici ortam kullan. Host environment ve permanent credential aktarımını kaldır; yalnızca allowlist environment ve dar kapsamlı kısa ömürlü credential kullan. Home mount kaldır; yalnızca gerekli input read-only, output kotalı ayrı volume olsun. Non-root execution, read-only root filesystem ve geçici yazma alanı açıkça yapılandırılmalı. Egress default-deny olmalı; gerekiyorsa allowlist üzerinden geçmeli. CPU, memory, disk, process, output sınırları ve wall-clock timeout ile process tree termination tanımlanmalı. İş sonrası environment ve output yaşam döngüsü temizlenmeli; audit log secret içermemeli.
+
+Kubernetes restricted admission tek başına read-only filesystem veya no-egress garantisi vermez; bunlar runtime ve network policy ile ayrıca uygulanmalı ve ölçülmeli. Windows/Docker backend gerçek izolasyon ve network davranışı kanıtlanmadan MicroVM denmemeli.
+
+Verification: provision sonrası kontrollü adversarial testlerle host dosyaları/environment/secrets erişiminin reddini, metadata/internal/public network çıkışının engellenmesini, timeout ve child process cleanup, fork/memory/disk/output limitlerini ve işler arası veri sızıntısı olmamasını doğrula. Runtime/backend configuration ile test evidence birlikte launch gate olsun. Bu review sırasında customer code çalıştırılmadı veya altyapı kurulmadı.

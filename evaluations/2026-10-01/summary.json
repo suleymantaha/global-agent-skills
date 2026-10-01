@@ -1,0 +1,12 @@
+{
+  "arm-a": {
+    "pass": 34,
+    "partial": 1,
+    "fail": 0
+  },
+  "arm-b": {
+    "pass": 35,
+    "partial": 0,
+    "fail": 0
+  }
+}

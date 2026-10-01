@@ -1,0 +1,10 @@
+Objective: ship a rounding correction to invoice previews, not payment collection.
+User correction: customer examples must use synthetic data. Deployment is NOT authorized.
+Completed: pricing.py changed to Decimal arithmetic; test_pricing.py adds a half-cent regression.
+Evidence: pytest -q exited 1. Failure: test_legacy_export expects "12.345" but gets "12.35".
+Build exited 0; this did not resolve the failing test.
+Earlier plan (superseded): deploy immediately after build.
+Open decision: whether the legacy export should retain three decimal places; user has not answered.
+Next action: inspect export contract before modifying that expectation.
+Opaque reference: INV-PREVIEW-42, branch fix/invoice-rounding. Do not invent commit hashes.
+Verbose historical noise: twelve successful package downloads, six repeated progress updates, and an abandoned float-based proposal.
