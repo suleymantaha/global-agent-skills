@@ -1,5 +1,30 @@
 # Global Agent Skills
 
+![Global Agent Skills — seven focused modules](assets/cover.png)
+
+[![Validate skills](https://github.com/suleymantaha/global-agent-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/suleymantaha/global-agent-skills/actions/workflows/validate.yml)
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](LICENSE)
+
+**Small, focused instructions for AI coding agents. Start with one skill and a real task.**
+
+Need to resume a long coding session without losing decisions, permissions, or failed checks? Start with `context-optimization`. Need reliable checks? Try `self-healing-quality-gates`. Each module has its own trigger and stays within the host's available tools and your project's conventions.
+
+## Quickstart: your first skill
+
+1. Clone this repo: `git clone https://github.com/suleymantaha/global-agent-skills.git`.
+2. Read `context-optimization/SKILL.md`, then copy that folder directly into your Codex skills directory (`$CODEX_HOME/skills`, default `~/.codex/skills`). See the [OS-specific installation instructions](#installation) below.
+3. In your next turn, ask:
+
+```text
+Use $context-optimization to prepare a handoff for my current task.
+Preserve the objective, permissions, changed files, actual checks, unresolved
+issues, evidence pointers, and the next action. Verify the repository state.
+```
+
+**See a real result:** [the launch-preparation handoff](examples/context-handoff/README.md) includes the actual request, captured command output, and agent-produced handoff. It is one maintainer-run example; broader behavioral evaluation is still pending.
+
+[Browse all seven skills](#skill-guide) · [Installation](#installation) · [Releases](https://github.com/suleymantaha/global-agent-skills/releases)
+
 Seven focused, reusable instruction modules for AI agents, organized according to the [Agent Skills specification](https://agentskills.io/specification).
 
 Use them to coordinate authorized workers, preserve context, design memory and isolation boundaries, run appropriate quality checks, integrate MCP tools, and capture knowledge. Install only the modules useful to your workflow.
@@ -46,6 +71,12 @@ global-agent-skills/
 ├── .gitignore                        # Excludes secrets, caches, local environments
 ├── .gitattributes                     # Normalizes text line endings to LF
 ├── requirements-dev.txt              # Validator dependency; not a runtime requirement
+├── assets/
+│   └── cover.png                      # Generated project cover
+├── examples/
+│   └── context-handoff/               # Actual request, evidence, output and limits
+├── docs/
+│   └── release-v0.1.0.md              # First collection release notes
 ├── .github/
 │   └── workflows/
 │       └── validate.yml              # Checks pushed commits and pull requests
@@ -272,7 +303,7 @@ python scripts/validate_skills.py
 
 The validator checks that skills exist, frontmatter is parseable, names match folders, descriptions have valid lengths, metadata maps strings to strings, instructions are nonempty, and repository-local Markdown file links resolve. It does not validate anchor existence, external URLs, or every optional Agent Skills field constraint. GitHub Actions runs this same validator on pushes and pull requests.
 
-Format and local-link checks have passed. Initial validator checks also exercised rejection of invalid names, non-string metadata, and missing local files. These are structural checks: realistic behavioral evaluation of the seven modules is still pending. No security, cost-saving, or isolation guarantee follows from a green CI run.
+Format and local-link checks have passed. Initial validator checks also exercised rejection of invalid names, non-string metadata, and missing local files. These are structural checks. A [maintainer-run context handoff](examples/context-handoff/README.md) demonstrates one real use; independent and broader behavioral evaluation of the collection is still pending. No security, cost-saving, or isolation guarantee follows from a green CI run.
 
 ## Troubleshooting
 
