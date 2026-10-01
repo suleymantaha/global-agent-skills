@@ -5,9 +5,30 @@
 [![Validate skills](https://github.com/suleymantaha/global-agent-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/suleymantaha/global-agent-skills/actions/workflows/validate.yml)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](LICENSE)
 
-**Small, focused instructions for AI coding agents. Start with one skill and a real task.**
+**An early, experimental collection of agent workflow guidance — use selectively, when it addresses an observed problem.**
 
-Need to resume a long coding session without losing decisions, permissions, or failed checks? Start with `context-optimization`. Need reliable checks? Try `self-healing-quality-gates`. Each module has its own trigger and stays within the host's available tools and your project's conventions.
+## Should you use this collection?
+
+These modules package general architectural guidance into skill instructions. They are optional references, not an essential upgrade for every coding agent. An already-capable agent may handle the same task equally well without reading them.
+
+Our [single matched-control evaluation](evaluations/2026-10-01/RESULTS.md) found near-equal results: the control fully met 34/35 criteria plus one partial; the skill arm fully met 35/35. The skill arm took 85 seconds versus 77 and produced 2,749 report tokens versus 2,583. **This run did not establish a meaningful general advantage, speed improvement, or token savings.** One run cannot establish universal usefulness or uselessness.
+
+### Recommended approach
+
+1. Start from a concrete recurring problem in your real project, such as lost decisions, repeated command mistakes, or conflicting edits.
+2. Check whether existing host features and repository instructions already solve it. Skip these modules if they add no useful information.
+3. Select only the relevant skill and adapt it to verified project commands, constraints, and evidence. Keep project-specific guidance local.
+4. Compare actual outcomes with and without the guidance over repeated tasks. Retain what helps; simplify or remove what does not.
+5. Build persistent memory, retrieval, sandboxing, or orchestration infrastructure only when the task actually needs it. Writing a SKILL.md about a mechanism does not implement that mechanism.
+
+### Where we are stopping
+
+The collection, examples, and measured results remain public for inspection and reuse. We are not expanding it into a full agent platform merely to complete an architecture checklist. Further development should be driven by demonstrated failures and measured benefits, not the effort already invested. No broad community adoption or production-readiness claim is made.
+
+The underlying architecture ideas may be useful in the right system. Our evaluation tests instruction bodies on small tasks; it does not evaluate a deployed memory, retrieval, or sandbox architecture.
+
+
+If preserving handoff details is an observed problem, consider `context-optimization`. If project checks are repeatedly missed, consider `self-healing-quality-gates`. Evaluate the difference on your own tasks before adopting either broadly.
 
 ## Quickstart: your first skill
 
