@@ -97,7 +97,8 @@ global-agent-skills/
 ├── evaluations/
 │   └── 2026-10-01/                    # Protocol, fixtures, outputs, review and measured results
 ├── examples/
-│   └── context-handoff/               # Actual request, evidence, output and limits
+│   ├── context-handoff/               # Actual request, evidence, output and limits
+│   └── multi-agent-orchestration/     # Walkthrough, tasks ledger, and worker report
 ├── docs/
 │   └── release-v0.1.0.md              # First collection release notes
 ├── .github/
@@ -114,22 +115,27 @@ global-agent-skills/
 ├── mcp-tool-integration/
 │   └── SKILL.md
 ├── multi-agent-orchestrator/
-│   └── SKILL.md
+│   ├── SKILL.md
+│   ├── assets/
+│   │   ├── subagent-report-template.md
+│   │   └── tasks-ledger-template.md
+│   └── references/
+│       ├── circuit-breaker.md
+│       ├── tier-classification.md
+│       └── worker-verifier-protocol.md
 ├── second-brain-vault/
 │   └── SKILL.md
 └── self-healing-quality-gates/
     └── SKILL.md
 ```
 
-Every module is currently self-contained. There are no per-skill scripts or assets to install. The top-level `scripts/` directory is repository maintenance tooling, not an agent skill.
-
-For future additions, a module may include `references/` for conditional guidance, `scripts/` for tested helpers, `assets/` for output templates, or `agents/openai.yaml` for Codex-specific metadata. Add these only when they have a concrete purpose and link relevant resources from `SKILL.md`.
+Every module is organized according to the Agent Skills specification. Modules may include `references/` for conditional guidance, `scripts/` for tested helpers, or `assets/` for output templates.
 
 ## Skill guide
 
 | Skill | Useful for | Guidance it adds |
 | --- | --- | --- |
-| [multi-agent-orchestrator](multi-agent-orchestrator/SKILL.md) | Explicitly requested or otherwise authorized delegation | Independent task scopes, file ownership, shared-filesystem checks, integration evidence |
+| [multi-agent-orchestrator](multi-agent-orchestrator/SKILL.md) | Explicitly requested or otherwise authorized delegation | Tier classification, independent scopes, worker-verifier protocol, circuit breakers, and integration evidence |
 | [code-sandbox-security](code-sandbox-security/SKILL.md) | Designing/reviewing untrusted-code execution | Threat-based isolation choice, resource limits, egress and credential boundaries, denied-access tests |
 | [context-optimization](context-optimization/SKILL.md) | Large outputs, long sessions, handoffs | Targeted retrieval, summaries that retain permissions and failures, evidence pointers |
 | [agent-memory-systems](agent-memory-systems/SKILL.md) | Persistent memory implementation/review | Scoped access, provenance, temporal facts, deletion, idempotency and outage handling |
